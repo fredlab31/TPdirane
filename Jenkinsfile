@@ -1,7 +1,7 @@
 pipeline {
      environment {
        ID_DOCKER = "${ID_DOCKER_PARAMS}"
-       IMAGE_NAME = "tp-dirane"
+       IMAGE_NAME = "tpdirane"
        IMAGE_TAG = "latest"
 //       PORT_EXPOSED = "80" à paraméter dans le job
        STAGING = "${ID_DOCKER}-staging"
@@ -41,7 +41,7 @@ pipeline {
                 // ]
 
                 // Scan again and fail on CRITICAL vulns
-                sh "trivy image $IMAGE_NAME --severity CRITICAL"
+                sh 'trivy image --no-progress --exit-code 1 --severity CRITICAL ${ID_DOCKER}/${IMAGE_NAME}:${IMAGE_TAG}'
 
              }
         }
