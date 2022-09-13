@@ -41,7 +41,7 @@ pipeline {
                 // ]
 
                 // Scan again and fail on CRITICAL vulns
-                sh "trivy image $IMAGE_NAME:$IMAGE_TAG --severity CRITICAL"
+                sh "trivy image $IMAGE_NAME --severity CRITICAL"
 
              }
         }
