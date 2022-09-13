@@ -1,7 +1,7 @@
 pipeline {
      environment {
        ID_DOCKER = "${ID_DOCKER_PARAMS}"
-       IMAGE_NAME = "tp-dirane"
+       IMAGE_NAME = "TPdirane"
        IMAGE_TAG = "latest"
 //       PORT_EXPOSED = "80" à paraméter dans le job
        STAGING = "${ID_DOCKER}-staging"
@@ -18,6 +18,7 @@ pipeline {
              }
         }
          stage('Scan Trivy') {
+             agent any
              steps {
               // Install trivy
               sh 'curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3'
