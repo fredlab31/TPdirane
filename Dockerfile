@@ -1,5 +1,5 @@
-
-FROM nginx:1.21.1
+FROM nginx:latest
+#FROM nginx:1.21.1
 LABEL maintainer="Ulrich MONJI"
 RUN apt-get update && \
     apt-get upgrade -y && \
