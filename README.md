@@ -1,5 +1,5 @@
 # TP Jenkins
-Test de badges
+Test de badge
 
-[![Build Status](https://0321-91-170-0-184.eu.ngrok.io/buildStatus/icon?job=deployment)](https://0321-91-170-0-184.eu.ngrok.io/job/deployment/)
+[![Build Status](http://b6ef-91-170-0-184.eu.ngrok.io/buildStatus/icon?job=deployment)](http://b6ef-91-170-0-184.eu.ngrok.io/job/deployment/)
 
